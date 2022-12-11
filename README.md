@@ -1,9 +1,9 @@
 # BÁO CÁO MÔN HỌC PROJECT I – IT3150
 
--Sinh viên thực hiện : 		Nguyễn Hoàng Hiệp 
--MSSV :					          20205204
--Mã Lớp : 					        721014
--GVHD :					          KHMT - Phạm Đăng Hải
+- Sinh viên thực hiện : 		Nguyễn Hoàng Hiệp 
+- MSSV :					          20205204
+- Mã Lớp : 					        721014
+- GVHD :					          KHMT - Phạm Đăng Hải
 
 - I.	Bài tập số 1 : Bài toán sắp xếp
   + 1.1.	Giới thiệu chung
