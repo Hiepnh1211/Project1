@@ -33,11 +33,11 @@ public class Ex2_TSP_NhanhCan {
 
 	
 	public void result() {
-		System.out.println();
+		System.out.print("\nPath taken:");
 			for(int i = 0; i < n; i++) {
-				System.out.print((x[i]+1) + "->");
+				System.out.print((best[i] + 1) + "->");
 			}
-			System.out.print((x[START]+1) + " total:" + totalBest);
+			System.out.print((best[START] + 1) + " \nTotal: " + totalBest);
 		
 	}
 	
