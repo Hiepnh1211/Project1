@@ -65,9 +65,7 @@ public class Ex2_TSP_VetCan {
 		
 		check[0] = 0;
 		
-		long start = System.currentTimeMillis();
 		Try(1, graph);
-		long end = System.currentTimeMillis();
 		
 		System.out.print("\nMinimum length: ");
 		System.out.print(ans + "\n");
@@ -76,6 +74,5 @@ public class Ex2_TSP_VetCan {
 			System.out.print(final_result[i] + " ");
 		}
 		
-		System.out.println("\nTime: " + (end - start));
 	}
 }
