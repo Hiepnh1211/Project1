@@ -7,6 +7,8 @@ import java.io.IOException;
 
 
 public class LL2{
+	public static String VanBanFile = "VanBan.txt";
+	public static String stopWFile = "stopW.txt";
 	public static final int MAX_LETTER = 20;
 	public static int l = 1;
 	
@@ -163,10 +165,10 @@ public class LL2{
 		String w = null ; 
 		
 		LL stopW  = new LL();
-		stopW.readStopW("stopCase.txt", stopW);
+		stopW.readStopW(stopWFile, stopW);
 		
 		LL2 VBList = new LL2();
-		File VanBan = new File("testcase.txt");
+		File VanBan = new File(VanBanFile);
 	    // Create the File Reader object
 	    FileReader vb = new FileReader(VanBan);
 	    // Create the BufferedReader object

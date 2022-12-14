@@ -6,6 +6,8 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class BnTree {
+	public static String VanBanFile = "VanBan.txt";
+	public static String stopWFile = "stopW.txt";
 	public static int MAX_LETTER = 20;
 	public static int l =1;
 	
@@ -85,10 +87,10 @@ public class BnTree {
 		String w = null ;
     	
     	LL stopW  = new LL();
-		stopW.readStopW("stopCase.txt", stopW);
+		stopW.readStopW(stopWFile, stopW);
 		
 		BnTree BNT = new BnTree();
-		File VanBan = new File("testcase.txt");
+		File VanBan = new File(VanBanFile);
 	    // Create the File Reader object
 	    FileReader vb = new FileReader(VanBan);
 	    // Create the BufferedReader object

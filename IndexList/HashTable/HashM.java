@@ -6,6 +6,8 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class HashM {
+	public static String VanBanFile = "VanBan.txt";
+	public static String stopWFile = "stopW.txt";
 	public static final int MAX_LETTER = 20;
 	public static int SIZE = 200;
 	public static LL2[] Hash = new LL2[200];
@@ -30,9 +32,9 @@ public class HashM {
 		}
 		HashM table = new HashM();
 		LL stopW  = new LL();
-		stopW.readStopW("stopW.txt", stopW);
+		stopW.readStopW(stopWFile, stopW);
 
-		File VanBan = new File("VanBan.txt");
+		File VanBan = new File(VanBanFile);
 	    // Create the File Reader object
 	    FileReader vb = new FileReader(VanBan);
 	    // Create the BufferedReader object
