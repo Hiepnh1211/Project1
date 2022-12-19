@@ -70,9 +70,9 @@ public class Ex2_TSP_VetCan {
 		System.out.print("\nMinimum length: ");
 		System.out.print(ans + "\n");
 		System.out.print("Path taken: ");
-		for(int i = 0; i <= n; i++) {
-			System.out.print((final_result[i]+1) + " ");
+		for(int i = 0; i < n; i++) {
+			System.out.print((final_result[i]+1) + "->");
 		}
-		
+		System.out.print(final_result[n]+1);
 	}
 }
