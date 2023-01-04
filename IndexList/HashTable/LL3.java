@@ -51,9 +51,16 @@ public class LL3 {
 	}
 	
 	public void showLine() {
+		int count = 0;
 		line currLine = head;
 		while(currLine != null) {
-			System.out.print(" " + currLine.line + " ");
+			if(count == 12){
+				System.out.printf("\n%-29s%4d"," ",currLine.line);
+				count =0 ;
+			}else {
+				System.out.printf("%4d",currLine.line);
+				count++;
+			}
 			currLine = currLine.nextLine;
 		}
 	}

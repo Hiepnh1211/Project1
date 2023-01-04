@@ -1,9 +1,6 @@
 package HashTable;
 
-import LinkedList.LL3;
-
 public class LL2{
-	public static final int MAX_LETTER = 20;
 	
 	//Node's values
 	class Node1{
@@ -92,7 +89,7 @@ public class LL2{
 			while(node != null) {
 				index = node.next;
 				while(index != null) {
-					//if the word of the first node is smaller alphabetically than the next node, 
+					//if the word of the first node is larger alphabetically than the next node,
 					//the values (word, count, line) of 2 nodes will be switch for each other
 					if(node.word.toLowerCase().compareTo(index.word.toLowerCase()) > 0) {
 						temp = node.word;
@@ -133,12 +130,10 @@ public class LL2{
         {    
 
             //printing each data in the list and next pointer pointing to the next node   
-        	
-            System.out.print(current.word + " "); 
-            System.out.print(" " + current.count + " ");
+
+			System.out.printf("%-20s%-4d",  current.word, current.count);
             current.ln.showLine();
-            System.out.print(";");
-            current = current.next;    
+            current = current.next;
         } 
         System.out.println();
 

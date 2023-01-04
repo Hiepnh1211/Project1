@@ -7,15 +7,15 @@ import java.io.IOException;
 
 
 public class LL2{
-	public static String VanBanFile = "VanBan.txt";
-	public static String stopWFile = "stopW.txt";
+	public static String VanBanFile = "testCase.txt";
+	public static String stopWFile = "stopCase.txt";
 	public static final int MAX_LETTER = 20;
 	public static int l = 1;
 	
 	//Node's values
 	class Node1{
 		String word; //The word
-		int count = 1; //Appearing times
+		int count = 0; //Appearing times
 		LL3 ln = new LL3(); // Linked list of the line where the word appear
 		Node1 next;
 		public Node1(String word) {
@@ -64,7 +64,7 @@ public class LL2{
             
             newNode.ln.add(l);
             
-            
+            newNode.count++;
         }    
 
         else 
@@ -78,6 +78,8 @@ public class LL2{
             tail = newNode;  
             
             newNode.ln.add(l);
+
+			newNode.count++;
 
         }   
         
@@ -145,9 +147,8 @@ public class LL2{
         {    
 
             //printing each data in the list and next pointer pointing to the next node   
-        	
-            System.out.print(current.word + " "); 
-            System.out.print(" " + current.count + " ");
+
+			System.out.printf("%-20s%4d ",  current.word, current.count);
             current.ln.showLine();
             current = current.next;    
             System.out.println();
@@ -191,7 +192,7 @@ public class LL2{
 	        	
 	        	//Blank w for the next input
 	        	for(int j = 0; j < i; j++) {
-	    	    	wrd[j] = '\0';
+	    	    	wrd[j] = ' ';
 	    	    }
 	        	i=0;
 	        	if(!w.isBlank() && !stopW.check1(w)) {

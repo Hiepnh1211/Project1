@@ -6,8 +6,8 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class BnTree {
-	public static String VanBanFile = "VanBan.txt";
-	public static String stopWFile = "stopW.txt";
+	public static String VanBanFile = "testCase.txt";
+	public static String stopWFile = "stopCase.txt";
 	public static int MAX_LETTER = 20;
 	public static int l =1;
 	
@@ -27,10 +27,6 @@ public class BnTree {
 	
 	BnTree(){
 		root = null;
-	}
-	
-	BnTree(String value){
-		root = new Node(value);
 	}
 	
 	void insert(String word) { root = insertRec(root, word); }
@@ -73,8 +69,7 @@ public class BnTree {
     {
         if (root != null) {
             inorderRec(root.left);
-            System.out.print(root.word + " ");
-            System.out.print(root.count + " ");
+			System.out.printf("%-20s%d ",  root.word, root.count);
             root.line.showLine();
             System.out.println();
             inorderRec(root.right);

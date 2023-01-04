@@ -6,8 +6,8 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class HashM {
-	public static String VanBanFile = "VanBan.txt";
-	public static String stopWFile = "stopW.txt";
+	public static String VanBanFile = "testCase.txt";
+	public static String stopWFile = "stopCase.txt";
 	public static final int MAX_LETTER = 20;
 	public static int SIZE = 200;
 	public static LL2[] Hash = new LL2[200];
@@ -62,7 +62,7 @@ public class HashM {
 	    	    }
 	        	i=0;
 	        	if(!w.isBlank() && !stopW.check1(w)) {
-	        		key = table.HashFunc(w);
+	        		key = table.HashFunc(w.toLowerCase());
 		        	Hash[key].insert(w,l);
 		        }
 	        	
@@ -71,7 +71,7 @@ public class HashM {
 	    System.out.println("Index List: ");
 	    for(int m = 0; m < SIZE; m++) {
 	    	if(Hash[m].head != null) {
-	    		System.out.print(m + " ");
+				System.out.printf("%-5d",m);
 	    		Hash[m].displaylist();
 	    	}
 	    }
