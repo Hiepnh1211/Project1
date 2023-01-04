@@ -6,10 +6,10 @@ public class Ex2_Xep_hau {
 	public static int[] x = new int[100];
 	public static String[][] map = new String[100][100]; 
 	public static int k = 0;
+	public static int count = 0;
 	
 	public static void Solution() {
-		
-		System.out.print("x = ( ");
+		System.out.print(count + " x = ( ");
 		for(int i = 1; i <= n; i++) {
 			System.out.print(x[i] + " ");
 		}
@@ -77,6 +77,7 @@ public class Ex2_Xep_hau {
 	            x[k] = v;
 	            if (k == n)
 	            {
+					count++;
 	                Solution();
 	            }
 	            else{
