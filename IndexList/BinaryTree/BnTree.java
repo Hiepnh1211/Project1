@@ -69,7 +69,7 @@ public class BnTree {
     {
         if (root != null) {
             inorderRec(root.left);
-			System.out.printf("%-20s%d ",  root.word, root.count);
+			System.out.printf("%-20s%-4d ",  root.word, root.count);
             root.line.showLine();
             System.out.println();
             inorderRec(root.right);

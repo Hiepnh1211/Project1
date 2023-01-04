@@ -148,7 +148,7 @@ public class LL2{
 
             //printing each data in the list and next pointer pointing to the next node   
 
-			System.out.printf("%-20s%4d ",  current.word, current.count);
+			System.out.printf("%-20s%-4d ",  current.word, current.count);
             current.ln.showLine();
             current = current.next;    
             System.out.println();
